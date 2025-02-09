@@ -9,11 +9,23 @@ Image classification is a fundamental task in computer vision, aiming to categor
 
 ## Dataset
 
-The dataset used in this project consists of images of cats and dogs.  The data is assumed to be organized into directories, with separate folders for training, augmented training (containing the augmented images), and testing sets. Each of these sets contains subfolders for "cats" and "dogs." The project also includes commented-out code showing how to download the dataset from Kaggle Hub, if needed.
+The dataset used in this project consists of images of cats and dogs. The data used in our demo is [Cats and Dogs image classification] by [Samuel Cortinhas], from kaggle. The data is organized into directories, with separate folders for training, augmented training (containing the augmented images), and testing sets. Each of these sets contains subfolders for "cats" and "dogs." The project also includes commented-out code showing how to download the dataset from Kaggle Hub, if needed, otherwise the file is pre-downloaded in the main directory as well.
+
 
 ## Model Architecture
 
-The core of the model is the ResNet-50 architecture.  We initialize the ResNet-50 model with random weights and then modify the final fully connected layer to have two output units, one for each class (cat and dog).  This allows the model to learn to distinguish between these two classes.
+This project utilizes the ResNet-50 architecture, a variant of the Deep Residual Network (ResNet) family. ResNet models were introduced to address the challenge of training increasingly deep neural networks.  As networks become deeper, they can suffer from the "degradation" problem, where accuracy saturates and even declines. This isn't due to overfitting, but rather difficulties in optimization, potentially related to vanishing/exploding gradients.
+
+ResNet-50, specifically, is a 50-layer deep convolutional neural network. It leverages the core concept of "residual learning" through the use of "skip connections" or "shortcut connections." These connections allow the network to learn "identity mappings," meaning they can effectively pass the input of a layer directly to its output if that proves to be the optimal operation.  This helps to alleviate the degradation problem and makes it easier to train very deep networks.
+
+Crucially, the code provided initializes the ResNet-50 model with no pre-trained weights (weights=None). This means the model starts with randomly initialized weights, not weights pre-trained on a large dataset like ImageNet.  This is a significant difference.  While transfer learning (using pre-trained weights) is common with ResNet-50, this project trains the model from scratch on the cats vs. dogs dataset.
+
+The code then modifies the final fully connected layer (model.fc = nn.Linear(model.fc.in_features, 2)) to have two output units, corresponding to the two classes (cat and dog).  This adjustment is necessary because the original output layer of ResNet-50 is designed for a much larger number of classes (e.g., 1000 for ImageNet).
+
+Therefore, the ResNet-50 model in this project is not being used in a transfer learning setup. Instead, it is being trained from scratch on the cats vs. dogs dataset.  This is important to note, as training from scratch typically requires more data and computational resources compared to fine-tuning a pre-trained model.  It also means the model's performance will depend heavily on the size and quality of the training data, making data augmentation even more critical in this scenario.
+
+![Model Architecture] (architecture.webp)
+![How it makes the process fast] (skip_layer.webp)
 
 ## Training Process
 
