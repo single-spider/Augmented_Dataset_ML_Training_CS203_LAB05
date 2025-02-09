@@ -17,7 +17,8 @@ The dataset used in this project consists of images of cats and dogs. The data u
 This project utilizes the ResNet-50 architecture, a variant of the Deep Residual Network (ResNet) family. ResNet models were introduced to address the challenge of training increasingly deep neural networks.  As networks become deeper, they can suffer from the "degradation" problem, where accuracy saturates and even declines. This isn't due to overfitting, but rather difficulties in optimization, potentially related to vanishing/exploding gradients.
 
 ResNet-50, specifically, is a 50-layer deep convolutional neural network. It leverages the core concept of "residual learning" through the use of "skip connections" or "shortcut connections." These connections allow the network to learn "identity mappings," meaning they can effectively pass the input of a layer directly to its output if that proves to be the optimal operation.  This helps to alleviate the degradation problem and makes it easier to train very deep networks.
-
+![Model Architecture](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*VM94wVftxP7wkiKo4BjfLA.png)
+![How it makes the process fast](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*WXiXzRpbUtdTpVOHMtQA8w.png)
 ![Model Architecture] (Architecture.jpg)
 ![How it makes the process fast] (Skip_layer.jpg)
 
