@@ -14,12 +14,15 @@ The dataset used in this project consists of images of cats and dogs. The data u
 
 The directory structure is as follows (after unzipping and splitting):
 
-'''
+Alternatively, using `bash`:
+
+```markdown
+```bash
 /content/
     split_data/
         train/
             cats/
-                *.jpg  (or other image extensions)
+                *.jpg
                 ...
             dogs/
                 *.jpg
@@ -38,15 +41,14 @@ The directory structure is as follows (after unzipping and splitting):
             dogs/
                 *.jpg
                 ...
-    test.zip (The original zipped dataset, if present)
-    test/ (The unzipped, original dataset. May or may not exist depending if it was the starting point)
+    test.zip
+    test/
         cats/
             *.jpg
             ...
         dogs/
             *.jpg
             ...
-'''
 
 ## Model Architecture
 
