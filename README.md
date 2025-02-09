@@ -24,8 +24,6 @@ The code then modifies the final fully connected layer (model.fc = nn.Linear(mod
 
 Therefore, the ResNet-50 model in this project is not being used in a transfer learning setup. Instead, it is being trained from scratch on the cats vs. dogs dataset.  This is important to note, as training from scratch typically requires more data and computational resources compared to fine-tuning a pre-trained model.  It also means the model's performance will depend heavily on the size and quality of the training data, making data augmentation even more critical in this scenario.
 
-![Model Architecture] (Architecture.jpg)
-![How it makes the process fast] (Skip_layer.jpg)
 
 ## Training Process
 
