@@ -13,42 +13,7 @@ Image classification is a fundamental task in computer vision, aiming to categor
 The dataset used in this project consists of images of cats and dogs. The data used in our demo is [Cats and Dogs image classification] by [Samuel Cortinhas], from kaggle. The data is organized into directories, with separate folders for training, augmented training (containing the augmented images), and testing sets. Each of these sets contains subfolders for "cats" and "dogs." The project also includes commented-out code showing how to download the dataset from Kaggle Hub, if needed, otherwise the file is pre-downloaded in the main directory as well.
 
 The directory structure is as follows (after unzipping and splitting):
-
-Alternatively, using `bash`:
-
-```markdown
-```bash
-/content/
-    split_data/
-        train/
-            cats/
-                *.jpg
-                ...
-            dogs/
-                *.jpg
-                ...
-        train_aug/
-            cats/
-                *.jpg
-                ...
-            dogs/
-                *.jpg
-                ...
-        test/
-            cats/
-                *.jpg
-                ...
-            dogs/
-                *.jpg
-                ...
-    test.zip
-    test/
-        cats/
-            *.jpg
-            ...
-        dogs/
-            *.jpg
-            ...
+(forward to end of the repo to see it)
 
 ## Model Architecture
 
@@ -145,3 +110,37 @@ The provided Python code performs the following steps:
 7.  **Evaluation:** The `evaluate_model` function evaluates the trained model on the test set, calculating and printing precision, recall, F1 score, and accuracy.
 8.  **Training and Evaluation Runs:** The code trains and evaluates two models: one on the original dataset and one on the augmented dataset.
 9. **Dataset Visualization:** Creates a bar chart to visualize the number of cat and dog images across train, augmented train and test datasets.
+
+
+```text
+/content/
+    split_data/
+        train/
+            cats/
+                *.jpg
+                ...
+            dogs/
+                *.jpg
+                ...
+        train_aug/
+            cats/
+                *.jpg
+                ...
+            dogs/
+                *.jpg
+                ...
+        test/
+            cats/
+                *.jpg
+                ...
+            dogs/
+                *.jpg
+                ...
+    test.zip
+    test/
+        cats/
+            *.jpg
+            ...
+        dogs/
+            *.jpg
+            ...
