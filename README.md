@@ -14,6 +14,7 @@ The dataset used in this project consists of images of cats and dogs. The data u
 
 The directory structure is as follows (after unzipping and splitting):
 
+'''
 /content/
     split_data/
         train/
@@ -45,6 +46,7 @@ The directory structure is as follows (after unzipping and splitting):
         dogs/
             *.jpg
             ...
+'''
 
 ## Model Architecture
 
