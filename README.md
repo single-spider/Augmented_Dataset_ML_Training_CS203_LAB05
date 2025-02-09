@@ -18,6 +18,9 @@ This project utilizes the ResNet-50 architecture, a variant of the Deep Residual
 
 ResNet-50, specifically, is a 50-layer deep convolutional neural network. It leverages the core concept of "residual learning" through the use of "skip connections" or "shortcut connections." These connections allow the network to learn "identity mappings," meaning they can effectively pass the input of a layer directly to its output if that proves to be the optimal operation.  This helps to alleviate the degradation problem and makes it easier to train very deep networks.
 
+![Model Architecture] (Architecture.jpg)
+![How it makes the process fast] (Skip_layer.jpg)
+
 Crucially, the code provided initializes the ResNet-50 model with no pre-trained weights (weights=None). This means the model starts with randomly initialized weights, not weights pre-trained on a large dataset like ImageNet.  This is a significant difference.  While transfer learning (using pre-trained weights) is common with ResNet-50, this project trains the model from scratch on the cats vs. dogs dataset.
 
 The code then modifies the final fully connected layer (model.fc = nn.Linear(model.fc.in_features, 2)) to have two output units, corresponding to the two classes (cat and dog).  This adjustment is necessary because the original output layer of ResNet-50 is designed for a much larger number of classes (e.g., 1000 for ImageNet).
