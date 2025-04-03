@@ -1,4 +1,5 @@
 # Augmented_Dataset_ML_Training_CS203_LAB05
+Authors: Gaurav Srivastava, Divyansh Saini
 
 # Image Classification with Data Augmentation using Augly and ResNet-50
 
