@@ -1,4 +1,4 @@
-# Augmented_Dataset_ML_Training_CS203_LAB05
+# Academic Project, Training CNNs from Scratch with Augmentation and Interpretability 		
 Authors: Gaurav Srivastava, Divyansh Saini
 
 # Image Classification with Data Augmentation using Augly and ResNet-50
